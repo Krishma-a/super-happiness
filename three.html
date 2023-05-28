@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript"><!--//type and language
+    alert("Hello World!");
+    [1,2].forEach(alert);//learning the use of semicolon
+    let message;
+    message = 'Hi';
+    message= 'Hey';//value stored in variable changes
+    let greet = message;//copying from a variable
+    alert(message);
+    alert(greet);
+    //difference in using var and let
+    if (true){
+        var test = true;
+    }
+    alert(test)//True as the variable lives after if and var has no block scope
+    //However, if we had used let the variable would only be visible inside if and it gives ReferenceError
+    let $ = 2;//They are valid variable names however, no other symbols should be used
+    let _ = 4;//Other languages like chinese logograms and cyrillic letters are allowed but it is not recommended
+    alert($+_);
+    //Using upper constants as aliases for difficult-to-remember values known prior to execution
+    const COLOR_RED = "#F00";//const is used for unchanging variables
+    const COLOR_GREEN = "#0F0";
+    const COLOR_BLUE = "#00F";
+    const COLOR_ORANGE = "#FF7F00";
+    let color = COLOR_BLUE;
+    alert(color);
+    alert(1/0);//learning datatypes
+    alert(NaN+5);//Any further calculation to NaN returns NaN
+    alert(NaN**0);//Only exception as it returns 1
+    -->
+    </script>
+</body>
+</html>
