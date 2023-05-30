@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type conversion</title>
+</head>
+<body>
+    <script>
+        let num = 34;
+        alert(typeof num);//returns number
+        num = String(num);//String conversion
+        alert(typeof num);//returns string
+        num = Number(num);//Numeric conversion
+        alert(typeof num);//returns number
+        alert(typeof("4"*"5"));//Numeric conversion automatically happens during mathematical operations
+        let day = Number("Today is Sunday!");
+        alert(day);//returns NaN
+        alert(Number(true));
+        alert(Boolean(""));//Boolean conversion
+        alert(Boolean("abc"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data types</title>
+</head>
+<body>
+    <script>
+        const abc = 3442655265556544234554547657676575545665465566545n;//n at the end means that it is BigInt
+        alert(abc);
+        let name = "Krishma";
+        alert(`Hi, ${name}`);//learning about string
+        alert(`The result is ${5*2+1}.`);
+        alert(`Hi, ${"name"}`);
+        let check = 4<3;
+        alert(check);//Learning boolean
+        let age = null;//the null value
+        alert(age);
+        let height;//the undefined value
+        alert(height);
+        let day = prompt("What day is today?","Sunday");//taking second parameter
+        alert(`Today is ${day}!`);
+        let study = confirm("Are you studying?");//using confirm
+        alert(study);
+        console.log(typeof true);//learning typeof operator
+        console.log(typeof 98n);
+        console.log(typeof Symbol("weight"));
+        console.log(typeof Math);
+        console.log(typeof null);//returns object but it is a recognized error of typeof
+        console.log(typeof alert);
+    </script>
+</body>
+</html>
