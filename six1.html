@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conditional branching</title>
+</head>
+<body>
+    <script>
+        //if statement
+        if (0){//it won't execute because it is falsy
+            alert("Hi");
+        }
+        if (1){//it will execute because it is truthy
+            alert("Hello");
+        }
+        let day = "morning";
+        let time = prompt("What time is it?", day);
+        let greet = (time=="morning");
+        if (greet){
+            alert("Good morning");
+        }
+        else{//else statement
+            alert("Good day!");
+        }
+        //ternary
+        let marks = prompt("What is your marks?");
+        let result = (marks<40)? alert("You fail.") : 
+        (marks<60) ? alert("Good.") :
+        (marks<80) ? alert("Satisfactory."):
+        (marks<90) ? alert("Excellent."):
+        alert("Brilliant.");
+    </script>
+</body>
+</html>
