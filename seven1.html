@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops</title>
+</head>
+<body>
+    <script>
+        //while loop
+        let sum = 0;
+        while (true){
+            let num = +prompt("Enter a number:");
+            if (!num) break;
+            sum +=num;
+        }
+        alert("The sum is "+sum);
+        //do-while loop
+        let i = 0;
+        do{
+            alert(i);
+            i++;
+        }
+        while(i<6){
+            alert(i);
+            i++;
+        }
+        //for loop
+        for (let i=0; i<10; i++){
+            alert(i);
+        }
+        stop: for(let i=0;i<2;i++){
+            for (let j =0;j<2;j++){
+                let value = +prompt(`Enter the values at (${i},${j}): `);
+                console.log(value);
+                if (!value) break stop;
+
+            }
+        }
+        alert("Stopped.")
+        //switch statement
+        let n = +prompt("Enter a number upto 3: ");
+        switch(n){
+            case 0:
+            case 1:
+                alert("Either 0 or 1");
+                break;
+            case 2:
+                alert("Right");
+                break;
+            case 3:
+                alert("True");
+                break;
+            default:
+                alert("It's above 3.");
+        }    
+    </script>
+</body>
+</html>
