@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical operators</title>
+</head>
+<body>
+    <script>
+        //OR operator
+        let age = 15;
+        let adult = true;
+        if (age>18 || age<25 || adult){
+            alert("Allowed.");
+        }
+        alert(0||1);//1 because OR returns the first truthy value
+        alert(null||undefined||0);//0 because OR returns the last falsy value if all are false
+        let name = "";
+        let caste = "";
+        let id = 0;
+        alert(name||caste||id||"Anonymous");
+        //Short-circuit evaluation of OR
+        true || alert("not printed");
+        false||alert("printed")
+        //AND operator
+        let a = 2;
+        let b= 3;
+        if (a==2&&b==3){
+            alert("hi");
+        }
+        alert(1&&0);//0 because the first falsy value
+        alert(1&&2&&true&&4);//4 because it returns the last value if all are truthy
+        //NOT operator
+        alert(!0);
+        alert(!!null);//false
+        //Nullish coalescing operator
+        let first = null;
+        let second;
+        let third = 19;
+        alert(first??second??third??"super");
+    </script>
+</body>
+</html>
