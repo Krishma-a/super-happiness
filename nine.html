@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        //local variable
+        function message(){
+            let msg ="Hello";//local variable
+            alert(msg);
+        }
+        message();
+        //alert(msg);//error
+        //Global variable
+        let name = "Krishma";
+        function greeting(){
+            alert("Greetings! "+name);
+        }
+        greeting();
+        //parameters
+        function showMessage(from, m){
+            from = '*'+from+'*';
+            alert(from+", "+m);
+        }
+        let from ="Kris";
+        showMessage(from,"Good afternoon.");
+        //Default values
+        function dateOfBirth(text,date ="no date given"){//putting a default value
+            alert(text+": "+date);
+        }
+        dateOfBirth("My birthday is on");
+        //We can also write default parameters using if, || and ??
+        //using if
+        function usingIf(input){
+            if (input===undefined){
+                input = "No message";
+            }
+            alert(input);
+        }
+        usingIf();
+        //Using OR
+        function usingOr(a){
+            a = a || "Empty message";
+            alert(a);
+        }
+        usingOr();
+        //using ?
+        function usingNullish(abc){
+            alert(abc??"Empty");
+        }
+        usingNullish(2);
+        usingNullish(null);
+        function checkAge(age) {
+            if (age >= 18) {
+                return true;
+            } 
+            else {
+                return confirm("Do you have permission from your parents?");
+            }
+        }
+        let age = prompt("How old are you?", 18);
+        if ( checkAge(age) ) {
+            alert('Access granted');
+        }
+        else{
+            alert('Access denied');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
