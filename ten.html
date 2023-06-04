@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function expressions</title>
+</head>
+<body>
+    <script>
+        //function expressions
+        let greet = function(){
+            alert("Hi");
+        };
+        greet();//shows the result
+        alert(greet);//shows the function code
+        //Copying a function to another variable
+        let sayHello = function(){
+            alert("Hello");
+        };
+        let func = sayHello;
+        func();//both works
+        sayHello();
+        //callback functions
+        function askQuestion(ques, yes, no){
+            if (confirm(ques)) yes()
+            else no();
+        }
+        function sayYes() {
+            alert( "You agreed." );
+        }
+        function sayNo() {
+            alert( "You canceled the execution." );
+        }
+        askQuestion("Do you agree?", sayYes, sayNo);
+        //Arrow functions
+        let sub = (a,b)=>a-b;
+        alert(sub(5,2));
+        let mul = a =>a*2;
+        alert(mul(8));
+        let age = prompt("What is your age?");
+        let sayGreetings = (age<18) ?
+        () => alert("Hi"): ()=>alert("Greetings");
+        sayGreetings();
+    </script>
+</body>
+</html>
