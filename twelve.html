@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci series</title>
+</head>
+<body>
+<script>
+    let term = +prompt("Enter the term: ");
+    let arr = [0, 1, ];
+    let a = 0;
+    let b = 1;
+    let c;
+    for (let i = 0; i < (term-2); i++){
+        c = a+b;
+        a = b;
+        b = c;
+        arr.push(c);
+    }
+    console.log("The Fibonacci series are: ",JSON.stringify(arr));
+</script>
+</body>
+</html>
