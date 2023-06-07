@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let av;
+        let arr = [];
+        let sum = 0;
+        while (true){
+            let input = +prompt("Enter the numbers you would like in an array: ");
+            if (!input) break;
+            arr.push(input);
+            var l = arr.length;
+        }
+        for (let i = 0; i<l; i++){
+            sum = sum + arr[i];
+            av = parseFloat(sum/l);
+        }
+        alert("The average value of an array is: "+av);
+    </script>
+</body>
+</html>
