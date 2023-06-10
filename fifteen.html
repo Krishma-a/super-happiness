@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+</head>
+<body>
+    <script>
+        let abc = new Object();//object constructor
+
+        let userInfo = {
+            name: "Krishma",
+            age : 19,
+            id : 2329461,
+            "likes food" : true //multiword property
+        }
+        alert(userInfo.name);//accessing
+        delete userInfo.id;//to delete
+        userInfo.college = "HCK";//add
+        userInfo["likes flowers"] = false;//use of square brackets
+        alert(userInfo["likes flowers"]);
+        delete userInfo["likes food"]
+
+        let key = prompt("What would you like to know?", "age");
+        alert(userInfo[key]);
+
+        let fruit = prompt("Which fruit to buy?", "apple");
+        let bag = {
+            [fruit]: 5, //the name of the property is taken from the variable
+        };
+        alert( bag.apple );
+        
+        let test = {//comes out in ascending order
+            "5" : "rose",
+            "7" : "lily",
+            "2" : "tulip"
+        }
+        for (let key in test){//for loop
+            alert(key);//gives key names
+            alert(test[key]);//gives values
+        };
+    </script>
+</body>
+</html>
