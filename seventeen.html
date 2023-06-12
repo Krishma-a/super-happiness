@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"this" keyword</title>
+</head>
+<body>
+    <script>
+        let user = {
+            name : "Krishma",
+            age : 19,
+
+            greet(){//method
+                alert("Hello");
+            }
+        }
+        user.greet();
+
+        let first = { a : 12 };
+        let second = { a : 16 };
+
+        function sayHello(){
+            alert(this.a);
+        }
+        //same function for two objects
+        first.f = sayHello;
+        second.f = sayHello;
+
+        first.f();
+        second['f']();//[] access the same method
+
+        //"this" in arrow function
+        let time = {
+            day : "Friday",
+            sayDay() {
+                let arrow = () => alert(this.day);
+                arrow();
+            }
+        };
+        time.sayDay(); 
+    </script>
+</body>
+</html>
