@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function User(name) {
+            if (!new.target) { //if it is not run by "new"
+                return new User(name); 
+            }
+            
+            this.name = name;
+        }
+        let ann = User("Ann"); //redirects the call to new User
+        alert(ann.name); 
+    </script>
+</body>
+</html>
