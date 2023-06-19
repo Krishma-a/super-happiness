@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = Symbol["age"];
+
+        let user = { //another code base
+            name : "Krishma",
+            [age] : 19 // square brackets for symbol in object literal
+        };
+        
+        let id = Symbol("id");
+        
+        user[id] = 1;
+        
+        alert( user[id] );//accessing from symbol as key
+        alert(user[age])
+    </script>
+</body>
+</html>
